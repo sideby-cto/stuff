@@ -2,10 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
-  height: 64px;
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  padding: 0 2.5rem;
+  height: 68px;
+  background: rgba(248, 245, 240, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border-soft);
+  box-shadow: 0 1px 0 var(--color-border-soft), var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -16,19 +19,32 @@
   border: none;
   cursor: pointer;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   padding: 0;
+  transition: opacity var(--transition-fast);
 }
 
-.logoIcon {
-  color: var(--color-accent);
-  font-size: 1rem;
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  line-height: 1;
 }
 
 .navList {
@@ -36,7 +52,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0.25rem;
+  gap: 0.15rem;
+  align-items: center;
 }
 
 .navLink {
@@ -44,11 +61,13 @@
   border: none;
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--color-text-secondary);
-  padding: 0.4rem 0.75rem;
-  border-radius: 6px;
-  transition: background 0.15s, color 0.15s;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-pill);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  letter-spacing: 0.01em;
 }
 
 .navLink:hover {
@@ -57,7 +76,7 @@
 }
 
 .navLink.active {
-  background: var(--color-primary-light);
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
   font-weight: 600;
 }

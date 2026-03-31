@@ -29,8 +29,12 @@ export default function App() {
       </main>
       <ContactModal />
       <footer className={styles.footer}>
-        <p>
-          From Scratch — connecting artists &amp; craftsmen with rescued materials.
+        <div className={styles.footerBrand}>
+          <span className={styles.footerMark}>✦</span>
+          From Scratch
+        </div>
+        <p className={styles.footerText}>
+          Connecting artists &amp; craftsmen with rescued materials.
           Facilitated by <strong>Small Action</strong>.
         </p>
       </footer>

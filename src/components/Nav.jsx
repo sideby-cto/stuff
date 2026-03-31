@@ -15,7 +15,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <button className={styles.logo} onClick={() => setCurrentPage('home')}>
-        <span className={styles.logoIcon}>✦</span> From Scratch
+        <span className={styles.logoMark}>✦</span> From Scratch
       </button>
       <ul className={styles.navList}>
         {navItems.map((item) => (

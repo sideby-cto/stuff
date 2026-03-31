@@ -35,7 +35,7 @@ export default function RequestMaterial() {
   if (submitted) {
     return (
       <div className={styles.successPage}>
-        <div className={styles.successIcon}>◇</div>
+        <div className={styles.successIconWrap}>◇</div>
         <h2>Your request is posted!</h2>
         <p>
           Your material request is now visible. If someone has what you need, Small Action will
@@ -56,6 +56,7 @@ export default function RequestMaterial() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
+        <p className={styles.eyebrow}>Tell us what you need</p>
         <h1 className={styles.heading}>Request Materials</h1>
         <p className={styles.sub}>
           Looking for specific rescued materials for your practice? Post a request and let the
@@ -158,7 +159,7 @@ export default function RequestMaterial() {
         </label>
 
         <button className={styles.submitBtn} type="submit">
-          Post request
+          Post request →
         </button>
       </form>
     </div>

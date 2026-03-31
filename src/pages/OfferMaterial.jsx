@@ -35,7 +35,7 @@ export default function OfferMaterial() {
   if (submitted) {
     return (
       <div className={styles.successPage}>
-        <div className={styles.successIcon}>✦</div>
+        <div className={styles.successIconWrap}>✦</div>
         <h2>Your listing is live!</h2>
         <p>
           Your surplus materials have been posted. Artists and craftsmen can now discover them and
@@ -56,6 +56,7 @@ export default function OfferMaterial() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
+        <p className={styles.eyebrow}>Share your surplus</p>
         <h1 className={styles.heading}>Offer Materials</h1>
         <p className={styles.sub}>
           Have surplus, offcut, or rescued materials? List them here so artists and craftsmen can
@@ -158,7 +159,7 @@ export default function OfferMaterial() {
         </label>
 
         <button className={styles.submitBtn} type="submit">
-          Post offering
+          Post offering →
         </button>
       </form>
     </div>

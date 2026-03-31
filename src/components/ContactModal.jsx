@@ -33,7 +33,7 @@ export default function ContactModal() {
         </button>
         {sent ? (
           <div className={styles.success}>
-            <div className={styles.successIcon}>✦</div>
+            <div className={styles.successIconWrap}>✦</div>
             <h2>Message sent to Small Action!</h2>
             <p>
               Small Action will reach out to both parties and facilitate the exchange. You should hear
@@ -46,7 +46,7 @@ export default function ContactModal() {
         ) : (
           <>
             <div className={styles.intro}>
-              <span className={styles.broker}>Small Action — broker</span>
+              <span className={styles.broker}>✦ Small Action — broker</span>
               <h2 className={styles.heading}>Connect about this listing</h2>
               <p className={styles.listingTitle}>"{listing.title}"</p>
               <p className={styles.note}>
@@ -92,7 +92,7 @@ export default function ContactModal() {
                 />
               </label>
               <button className={styles.submitBtn} type="submit">
-                Send to Small Action
+                Send to Small Action →
               </button>
             </form>
           </>

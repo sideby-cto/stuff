@@ -4,6 +4,7 @@ export default function About() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
+        <p className={styles.eyebrow}>Our story</p>
         <h1 className={styles.heading}>About From Scratch</h1>
       </header>
 
@@ -35,12 +36,11 @@ export default function About() {
           giver and the receiver have a thoughtful, supported experience.
         </p>
         <div className={styles.smallActionCard}>
-          <span className={styles.mark}>✦</span>
+          <div className={styles.mark}>✦</div>
           <div>
             <strong>Small Action</strong>
             <p>
               Independent broker for rescued material exchanges among artists and craftsmen.
-              <br />
               Response time: within 2 business days.
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function About() {
       </section>
 
       <section className={styles.section}>
-        <h2>How it's different from Facebook Marketplace</h2>
+        <h2>How it differs from general marketplaces</h2>
         <div className={styles.comparisonGrid}>
           <div className={styles.comparisonCard}>
             <h3>From Scratch</h3>

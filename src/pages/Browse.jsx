@@ -25,21 +25,26 @@ export default function Browse() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
+        <p className={styles.eyebrow}>Discover rescued materials</p>
         <h1 className={styles.heading}>Browse Materials</h1>
         <p className={styles.sub}>
-          Explore available and needed materials from artists and craftsmen across the country.
+          Offerings and requests from artists and craftsmen across the country.
         </p>
       </header>
 
       <div className={styles.filters}>
-        <input
-          className={styles.search}
-          type="search"
-          placeholder="Search materials…"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          aria-label="Search materials"
-        />
+        <div className={styles.searchWrap}>
+          <span className={styles.searchIcon}>🔍</span>
+          <input
+            className={styles.search}
+            type="search"
+            placeholder="Search materials, tags…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            aria-label="Search materials"
+          />
+        </div>
+        <div className={styles.filterDivider} />
         <div className={styles.typeToggle} role="group" aria-label="Filter by type">
           {['all', 'offer', 'need'].map((t) => (
             <button
@@ -47,10 +52,11 @@ export default function Browse() {
               className={`${styles.toggleBtn} ${typeFilter === t ? styles.toggleActive : ''}`}
               onClick={() => setTypeFilter(t)}
             >
-              {t === 'all' ? 'All' : t === 'offer' ? '✦ Offerings' : '◇ Requests'}
+              {t === 'all' ? 'All' : t === 'offer' ? '✦ Offering' : '◇ Seeking'}
             </button>
           ))}
         </div>
+        <div className={styles.filterDivider} />
         <select
           className={styles.categorySelect}
           value={categoryFilter}
@@ -63,11 +69,16 @@ export default function Browse() {
             </option>
           ))}
         </select>
+        <span className={styles.resultsMeta}>
+          {filtered.length} listing{filtered.length !== 1 ? 's' : ''}
+        </span>
       </div>
 
       {filtered.length === 0 ? (
         <div className={styles.empty}>
-          <p>No listings match your search. Try adjusting the filters.</p>
+          <div className={styles.emptyIcon}>🌿</div>
+          <p>No listings match your search.</p>
+          <p>Try adjusting the filters above.</p>
         </div>
       ) : (
         <div className={styles.grid}>
