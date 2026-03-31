@@ -1,0 +1,51 @@
+/* Design tokens */
+:root {
+  --font-display: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-bg: #faf9f6;
+  --color-surface: #ffffff;
+  --color-border: #e8e4dc;
+  --color-hover: #f2ede4;
+
+  --color-text: #1a1714;
+  --color-text-secondary: #6b6560;
+
+  --color-primary: #5c4f3d;
+  --color-primary-dark: #3e3528;
+  --color-primary-light: #f0ebe2;
+
+  --color-accent: #8b6f47;
+
+  --color-offer: #4a7c59;
+  --color-offer-light: #e8f3ec;
+
+  --color-need: #6b4fa0;
+  --color-need-light: #f0ebfa;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+a {
+  color: var(--color-primary);
+}
